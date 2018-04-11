@@ -45,7 +45,6 @@ export class AppComponent implements OnInit {
 
     container.ondrop = function(event) {
       event.preventDefault();
-      console.log(event);
       nodes.add({
         id: '6',
         label: 'test'
