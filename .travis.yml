@@ -13,4 +13,4 @@ before_install:
 before_script: 
   - npm install
 script: 
-  - ng test
+  - ng e2e
