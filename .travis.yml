@@ -12,5 +12,4 @@ cache: bundler
 before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 script: 
-  - node_modules/karma/bin/karma start karma.conf.js --single-run
   - ng test
