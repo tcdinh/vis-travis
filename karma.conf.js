@@ -27,7 +27,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: process.env.TRAVIS ? ['Chrome_travis_ci'] : ['Chrome'],
     customLaunchers: {
       Chrome_travis_ci: {
         base: 'Chrome',
@@ -37,9 +37,3 @@ module.exports = function (config) {
     singleRun: true
   });
 };
-
-if (process.env.TRAVIS) {
-  configuration.browsers = ['Chrome_travis_ci'];
-}
-
-config.set(configuration);
